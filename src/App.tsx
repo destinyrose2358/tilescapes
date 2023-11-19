@@ -1,24 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import GameView from './game-engine/components/game-view';
 
 function App() {
+  // const canvasRef = useRef<HTMLCanvasElement>(null);
+  // const [gameEngine, setGameEngine] = useState<Game>();
+  // useEffect(() => {
+  //   if (canvasRef.current !== null) {
+  //     const newGame = new Game(canvasRef.current);
+  //     setGameEngine(newGame)
+  //   }
+  // }, [
+  // ]);
+  // const gameLoop = useCallback(() => {
+  //   if (gameEngine) {
+  //     requestAnimationFrame(gameLoop);
+  //     gameEngine.update();
+  //     gameEngine.render();
+  //   }
+  // }, [
+  //   gameEngine
+  // ]);
+  // useEffect(() => {
+  //   gameLoop();
+  // }, [gameLoop]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{
+      width: "100vw",
+      height: "100vh",
+      backgroundColor: "green",
+      overflow: "hidden"
+    }}>
+      <GameView />
+      {/* <canvas
+        ref={canvasRef}
+        id="game-screen"
+        style={{
+          width: "100%",
+          height: "100%",
+          backgroundColor: "blue",
+        }}
+      /> */}
     </div>
   );
 }

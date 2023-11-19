@@ -1,0 +1,3 @@
+.tile:hover {
+    filter: brightness(50%);
+}
